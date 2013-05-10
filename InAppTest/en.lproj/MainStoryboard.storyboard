@@ -66,6 +66,7 @@
                                         <connections>
                                             <outlet property="descLabel" destination="7GJ-cO-w9P" id="qKj-57-3bO"/>
                                             <outlet property="priceLabel" destination="ip5-Gm-bAv" id="lxb-9i-1wa"/>
+                                            <outlet property="purchaseButton" destination="sBd-na-H67" id="tAO-QF-Q1y"/>
                                             <outlet property="titleLabel" destination="qho-Iq-RqF" id="MBn-15-txq"/>
                                         </connections>
                                     </tableViewCell>
@@ -88,6 +89,7 @@
             <relationships>
                 <relationship kind="outlet" name="descLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="purchaseButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

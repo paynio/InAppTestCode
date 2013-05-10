@@ -9,14 +9,21 @@
 #import "AppDelegate.h"
 #import "MyStoreObserver.h"
 
+@interface AppDelegate ()
+
+@property (nonatomic, strong) MyStoreObserver *observer;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
-    MyStoreObserver *observer = [[MyStoreObserver alloc]init];
-    [[SKPaymentQueue defaultQueue]addTransactionObserver:observer];
+    self.observer = [[MyStoreObserver alloc]init];
+    [[SKPaymentQueue defaultQueue]addTransactionObserver:self.
+     observer];
     
     return YES;
 }

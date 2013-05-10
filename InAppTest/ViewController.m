@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) NSArray *productIDs;
+@property (nonatomic, strong) NSArray *products;
 
 @end
 
@@ -44,6 +44,19 @@
     [request start];
 }
 
+- (IBAction)purchasePressed:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    SKProduct *product = [self.products objectAtIndex:button.tag];
+    
+    SKMutablePayment *payment = [SKMutablePayment paymentWithProduct:product];
+    payment.quantity = 1;
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
+    NSLog(@"Payment made");
+}
+
+
+
 #pragma mark - SKProductsRequestDelegate
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
@@ -55,8 +68,8 @@
     }
     if (response.products)
     {
-        self.productIDs = response.products;
-        for (SKProduct *prod in self.productIDs)
+        self.products = response.products;
+        for (SKProduct *prod in self.products)
         {
             NSLog(@"Product found: %@", prod.localizedTitle);
         }
@@ -69,9 +82,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     InAppCell *cell = [tableView dequeueReusableCellWithIdentifier:@"inApp"];
-    SKProduct *prod = [self.productIDs objectAtIndex:indexPath.row];
+    SKProduct *prod = [self.products objectAtIndex:indexPath.row];
     cell.titleLabel.text = prod.localizedTitle;
     cell.descLabel.text = prod.localizedDescription;
+    cell.purchaseButton.tag = indexPath.row;
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
     [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
@@ -84,8 +98,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.productIDs)
-        return [self.productIDs count];
+    if (self.products)
+        return [self.products count];
     
     return 0;
 }
@@ -185,6 +199,4 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 */
 
-- (IBAction)purchasePressed:(id)sender {
-}
 @end

@@ -34,6 +34,27 @@
     }
 }
 
+- (void)paymentQueue:(SKPaymentQueue *)queue removedTransactions:(NSArray *)transactions
+{
+    NSLog(@"removed Transactions");
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
+{
+    NSLog(@"restore Completed Transactions");
+}
+
+- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
+{
+    NSLog(@"paymentQueueRestoreCompleted");
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue updatedDownloads:(NSArray *)downloads
+{
+    NSLog(@"updatedDownloads");
+}
+
+
 - (void)completeTransaction:(SKPaymentTransaction*)transaction
 {
     NSLog(@"Completed Transaction");
