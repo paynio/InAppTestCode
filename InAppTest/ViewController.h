@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StoreKit/StoreKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SKProductsRequestDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)purchasePressed:(id)sender;
 
 @end

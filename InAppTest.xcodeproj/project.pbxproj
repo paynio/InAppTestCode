@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0060D3A173D053D008CF19F /* InAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0060D39173D053D008CF19F /* InAppCell.m */; };
 		F06A747B173CFA4700836318 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747A173CFA4700836318 /* UIKit.framework */; };
 		F06A747D173CFA4700836318 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747C173CFA4700836318 /* Foundation.framework */; };
 		F06A747F173CFA4700836318 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747E173CFA4700836318 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 		F06A74A1173CFA4800836318 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747C173CFA4700836318 /* Foundation.framework */; };
 		F06A74A9173CFA4800836318 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F06A74A7173CFA4800836318 /* InfoPlist.strings */; };
 		F06A74AC173CFA4800836318 /* InAppTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A74AB173CFA4800836318 /* InAppTestTests.m */; };
+		F06A74B6173CFC2400836318 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A74B5173CFC2400836318 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0060D38173D053D008CF19F /* InAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppCell.h; sourceTree = "<group>"; };
+		F0060D39173D053D008CF19F /* InAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppCell.m; sourceTree = "<group>"; };
 		F06A7477173CFA4700836318 /* InAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06A747A173CFA4700836318 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F06A747C173CFA4700836318 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +62,7 @@
 		F06A74A8173CFA4800836318 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F06A74AA173CFA4800836318 /* InAppTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InAppTestTests.h; sourceTree = "<group>"; };
 		F06A74AB173CFA4800836318 /* InAppTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppTestTests.m; sourceTree = "<group>"; };
+		F06A74B5173CFC2400836318 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06A74B6173CFC2400836318 /* StoreKit.framework in Frameworks */,
 				F06A747B173CFA4700836318 /* UIKit.framework in Frameworks */,
 				F06A747D173CFA4700836318 /* Foundation.framework in Frameworks */,
 				F06A747F173CFA4700836318 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +93,7 @@
 		F06A746E173CFA4700836318 = {
 			isa = PBXGroup;
 			children = (
+				F06A74B5173CFC2400836318 /* StoreKit.framework */,
 				F06A7480173CFA4700836318 /* InAppTest */,
 				F06A74A4173CFA4800836318 /* InAppTestTests */,
 				F06A7479173CFA4700836318 /* Frameworks */,
@@ -122,6 +129,8 @@
 				F06A7492173CFA4800836318 /* MainStoryboard.storyboard */,
 				F06A7495173CFA4800836318 /* ViewController.h */,
 				F06A7496173CFA4800836318 /* ViewController.m */,
+				F0060D38173D053D008CF19F /* InAppCell.h */,
+				F0060D39173D053D008CF19F /* InAppCell.m */,
 				F06A7481173CFA4700836318 /* Supporting Files */,
 			);
 			path = InAppTest;
@@ -273,6 +282,7 @@
 				F06A7487173CFA4700836318 /* main.m in Sources */,
 				F06A748B173CFA4700836318 /* AppDelegate.m in Sources */,
 				F06A7497173CFA4800836318 /* ViewController.m in Sources */,
+				F0060D3A173D053D008CF19F /* InAppCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,10 +391,12 @@
 		F06A74B0173CFA4800836318 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Payne (RG5XXA5N9T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InAppTest/InAppTest-Prefix.pch";
 				INFOPLIST_FILE = "InAppTest/InAppTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BFDB1BB2-DD75-4FBD-B719-14226FAF13E2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,10 +404,12 @@
 		F06A74B1173CFA4800836318 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Payne (RG5XXA5N9T)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InAppTest/InAppTest-Prefix.pch";
 				INFOPLIST_FILE = "InAppTest/InAppTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BFDB1BB2-DD75-4FBD-B719-14226FAF13E2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -453,6 +467,7 @@
 				F06A74B1173CFA4800836318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F06A74B2173CFA4800836318 /* Build configuration list for PBXNativeTarget "InAppTestTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +476,7 @@
 				F06A74B4173CFA4800836318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
