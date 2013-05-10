@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F0060D3A173D053D008CF19F /* InAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0060D39173D053D008CF19F /* InAppCell.m */; };
+		F0060D3D173D1046008CF19F /* MyStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F0060D3C173D1046008CF19F /* MyStoreObserver.m */; };
 		F06A747B173CFA4700836318 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747A173CFA4700836318 /* UIKit.framework */; };
 		F06A747D173CFA4700836318 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747C173CFA4700836318 /* Foundation.framework */; };
 		F06A747F173CFA4700836318 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A747E173CFA4700836318 /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		F0060D38173D053D008CF19F /* InAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppCell.h; sourceTree = "<group>"; };
 		F0060D39173D053D008CF19F /* InAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppCell.m; sourceTree = "<group>"; };
+		F0060D3B173D1046008CF19F /* MyStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStoreObserver.h; sourceTree = "<group>"; };
+		F0060D3C173D1046008CF19F /* MyStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStoreObserver.m; sourceTree = "<group>"; };
 		F06A7477173CFA4700836318 /* InAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06A747A173CFA4700836318 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F06A747C173CFA4700836318 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +134,8 @@
 				F06A7496173CFA4800836318 /* ViewController.m */,
 				F0060D38173D053D008CF19F /* InAppCell.h */,
 				F0060D39173D053D008CF19F /* InAppCell.m */,
+				F0060D3B173D1046008CF19F /* MyStoreObserver.h */,
+				F0060D3C173D1046008CF19F /* MyStoreObserver.m */,
 				F06A7481173CFA4700836318 /* Supporting Files */,
 			);
 			path = InAppTest;
@@ -283,6 +288,7 @@
 				F06A748B173CFA4700836318 /* AppDelegate.m in Sources */,
 				F06A7497173CFA4800836318 /* ViewController.m in Sources */,
 				F0060D3A173D053D008CF19F /* InAppCell.m in Sources */,
+				F0060D3D173D1046008CF19F /* MyStoreObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
